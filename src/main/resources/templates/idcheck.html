@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table>
+        <h1>[ID 중복 확인]</h1>
+        <form action="idcheck" method="post">
+            <tr>
+               <td>검색어 ID</td>
+               <th><input required maxlength="15" minlength="5" type="text" id="searchId" name="searchId"></th> 
+               <th><input type="submit" value="검색"></th> 
+            </tr>
+
+        </form>
+        <div th:if="${searchId != null}">
+            <div th:if="${result}">
+                <p><span th:text=${searchId}></span>사용가능</p>
+                <p><input type="button" value="ID사용하기" th:searchId="${searchId}" onclick="inputId(this.getAttribute('searchId'))"></p>
+            </div>
+            <div th:if="${not result}">
+                <p><span th:text=${searchId}></span>이미 사용중인 ID</p>
+            </div>
+        </div>
+    </table>
+    <div>
+
+    </div>
+    <script th:src="@{/js/idcheck.js}"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    
+</head>
+<body>
+    <h1>회원가입</h1>
+    <table class="input">
+        <form action="join" method="post" onsubmit="return check()">
+            <tr>
+                <td>아이디</td>
+                <th><input required maxlength="15" type="text" id="memberid" name="memberid" placeholder="ID중복확인" readonly="readonly"></th>
+                <th><input type="button" value="ID중복확인" onclick="idFormOpen()"></th>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <th><input required maxlength="15" minlength="6" type="password" id="memberpw" name="memberpw"></th>
+                <th></th>
+            </tr>
+            <tr>
+                <td>비밀번호 확인</td>
+                <th><input required maxlength="15" minlength="6" type="password" id="memberpw2" name="memberpw2" onchange="isSame()"></th>
+                <th><span id="same"></span></th>
+                
+            </tr>
+            <tr>
+                <td>이름</td>
+                <th><input required maxlength="15" type="text" id="membername" name="membername" placeholder=" "></th>
+            </tr>
+            <tr>
+                <td>email</td>
+                <th><input required maxlength="15" type="email" id="email" name="email" placeholder=" "></th>
+            </tr>
+            <tr>
+                <td>phone</td>
+                <th><input required maxlength="15" type="text" id="phone" name="phone" placeholder=" "></th>
+            </tr>
+            <tr>
+                <td>address</td>
+                <th><input required maxlength="15" type="text" id="address" name="address" placeholder=" "></th>
+            </tr>
+            <tr>
+                <td class="etc" colspan="2"><input type="submit" id="save" name="save"></td>
+                
+            </tr>
+           
+        </form>
+    </table>
+    <!-- <script defer th:href="@{/js/main.js}"></script> -->
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/js/idcheck.js}"></script>
+    <script src="https://kit.fontawesome.com/def66b134a.js" crossorigin="anonymous"></script>
+</body>
+</html>

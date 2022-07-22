@@ -1,0 +1,20 @@
+table{
+    padding:10px
+}
+
+td,th{
+    /* border:1px dotted red; */
+    text-align: center;
+    height: 20px;
+}
+td{
+    background-color: aliceblue;
+}
+
+td.etc{
+    background-color: white;
+}
+
+th:nth-child(n+2){
+    text-align: left;
+}

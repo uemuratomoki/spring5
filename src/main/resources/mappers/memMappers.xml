@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        
+<mapper namespace="net.softsociety.spring5.dao.MemDAO">
+
+    <insert id="joinMember" parameterType="Mem">
+    insert into spring5_member(memberid, memberpw, membername, email, phone, address) 
+    values(#{memberid}, #{memberpw}, #{membername}, #{email}, #{phone}, #{address})
+	</insert>
+
+    <select id="idcheck" resultType="Mem" parameterType="string">
+    select * from spring5_member where memberid=#{memberid}
+    </select>
+</mapper>

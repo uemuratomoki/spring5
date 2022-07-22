@@ -1,0 +1,20 @@
+-- spring5 테이블 구조
+
+-- 회원 정보
+create table spring5_member(
+    memberid varchar2(20) primary key,            --사용자 식별 ID. 유일한 값. 문자열 20byte.
+    memberpw varchar2(100) not null,           --로그인할때 비밀번호. 필수. 문자열 100byte.
+    membername varchar2(50),             --사용자이름
+    email varchar2(50),           --이메일주소
+    phone varchar2(50),                      --전화번호
+    address varchar2(100),                     --집주소
+    enabled number(1) default 1 check (enabled in(0,1)),                           --계정상태 숫자1자리. 1은 사용가능 (기본값). 0은 사용불가능 아이디.
+    rolename varchar2(20) default 'ROLE_USER' check(rolename in('ROLE_USER', 'ROLE_ADMIN'))                      --문자열20byte. 'ROLE_USER' (기본값), 'ROLE_ADMIN'중 하나.
+);
+
+
+-- 게시판 글
+
+
+-- 게시판의 댓글
+

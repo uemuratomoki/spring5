@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <script th:href="@{/js/main.js}"></script>
+</head>
+<body>
+    <h1>[ spring5 ]</h1>
+    <ul>
+        <li><a th:href="@{/member/join}">회원가입</a></li>
+        <!-- 회원가입 - 가입 폼에 ID~주소까지 입력하고 "가입"버튼 클릭하면 Controller에서 log출력 (ID는 3~10자, 비밀번호는 3~10자 2번 입력받아 확인,
+            이름 필수) -> JavaScript로 -->
+        
+        <li><a href="signup">로그인</a></li>
+        <li><a href="signup">로그아웃</a></li>
+        <li><a href="signup">개인정보수정</a></li>
+        <li><a href="signup">게시판</a></li>
+        
+    </ul>
+</body>
+</html>
